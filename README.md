@@ -1,4 +1,4 @@
-# Scheduler for Douglas D. Schumann Library & Learning Commons.
+# Scheduler for Douglas D. Schumann Library & Learning Commons
 
 ## Team Members:
 
