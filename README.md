@@ -1,6 +1,6 @@
 # Scheduler for Douglas D. Schumann Library & Learning Commons
 
-## Team Members:
+## Team Members
 
 * Brian Pham
 * Karl Lamoureux
