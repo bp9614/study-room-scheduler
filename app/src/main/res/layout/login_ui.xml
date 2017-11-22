@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.np.study_room_scheduler.MainActivity"
+    android:orientation="vertical"
+    android:background="#E3E3E3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Study Room Scheduler"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outlook Login"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="15dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold"/>
+    
+    <EditText
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:hint="USERNAME@EMAIL.COM"
+        android:layout_marginBottom="40dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="15dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold"/>
+    
+    <EditText
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:hint="*************"
+        android:layout_marginBottom="50dp"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"/>
+    
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="Skip"
+
+        android:layout_gravity="end"/>
+    
+
+</LinearLayout>
