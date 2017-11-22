@@ -39,7 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
         android:hint="USERNAME@EMAIL.COM"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="40dp"
+        android:inputType="textEmailAddress"/>
     
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
         android:hint="*************"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:inputType="textPassword"/>
     
     <Button
         android:layout_width="wrap_content"
