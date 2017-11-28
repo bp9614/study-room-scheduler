@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="months_array">
+    <string-array name="month_array">
         <item>Jan</item>
         <item>Feb</item>
         <item>Mar</item>
@@ -15,7 +15,7 @@
         <item>Dec</item>
     </string-array>
 
-    <string-array name="days_array">
+    <string-array name="day_array">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -59,7 +59,8 @@
         <item>2023</item>
     </string-array>
 
-    <string-array name="hours_array">
+    <string-array name="hour_array">
+        <item>12</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -71,10 +72,9 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
-        <item>12</item>
     </string-array>
 
-    <string-array name="minutes_array">
+    <string-array name="minute_array">
         <item>00</item>
         <item>30</item>
     </string-array>
