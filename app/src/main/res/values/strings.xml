@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">study-room-scheduler</string>
+    <string name="login_error_msg">Please fill any empty fields</string>
 </resources>
