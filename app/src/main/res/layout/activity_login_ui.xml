@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.np.study_room_scheduler.MainActivity"
+    tools:context="com.example.np.study_room_scheduler.LoginUI"
     android:orientation="vertical"
     android:background="#E3E3E3"
     android:clickable="true"
@@ -43,6 +43,7 @@
         android:layout_marginLeft="55dp"
         android:hint="USERNAME@EMAIL.COM"
         android:layout_marginBottom="40dp"
+        android:maxLines="1"
         android:inputType="textEmailAddress"/>
     
     <TextView
@@ -60,6 +61,7 @@
         android:layout_marginLeft="55dp"
         android:hint="*************"
         android:layout_marginBottom="50dp"
+        android:maxLines="1"
         android:inputType="textPassword"/>
     
     <Button
@@ -75,6 +77,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Skip"
-        android:layout_gravity="end"/>
+        android:layout_gravity="end"
+        android:onClick="skip"/>
 
 </LinearLayout>

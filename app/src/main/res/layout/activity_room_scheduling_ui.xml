@@ -24,12 +24,12 @@
         android:text="Organizer"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_marginLeft="55dp"/>
+        android:layout_marginLeft="45dp"/>
 
     <EditText
         android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginBottom="20dp"
         android:focusable="false"
         android:inputType="none"/>
@@ -38,7 +38,7 @@
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="20dp"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp">
 
@@ -110,12 +110,12 @@
         android:text="Members"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_marginLeft="55dp"/>
+        android:layout_marginLeft="45dp"/>
 
     <EditText
         android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
         android:inputType="textEmailAddress"/>
@@ -123,7 +123,7 @@
     <EditText
         android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
         android:inputType="textEmailAddress"/>
@@ -131,7 +131,7 @@
     <EditText
         android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
         android:inputType="textEmailAddress"
