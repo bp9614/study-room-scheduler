@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectDayMonthUI" />
-        <activity android:name=".AvailabilitySearchUI" />
-        <activity android:name=".RoomSchedulingUI"></activity>
+        <activity android:name=".ActivitySelectDayMonthUI" />
+        <activity android:name=".ActivityAvailabilitySearchUI" />
+        <activity android:name=".RoomSchedulingUI" />
+        <activity android:name=".Tabs"></activity>
     </application>
 
 </manifest>
