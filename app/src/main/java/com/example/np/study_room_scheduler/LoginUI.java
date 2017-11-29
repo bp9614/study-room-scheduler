@@ -16,7 +16,7 @@ public class LoginUI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_ui);
-        
+
         ((EditText) findViewById(R.id.email)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -51,7 +51,7 @@ public class LoginUI extends AppCompatActivity {
     }
 
     public void skip(View view) {
-        Intent intent = new Intent(this, Tabs.class);
+        Intent intent = new Intent(this, SelectOrSearchUI.class);
         startActivity(intent);
     }
 }

@@ -8,6 +8,6 @@ public class ActivitySelectDayMonthUI extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection_ui);
+        setContentView(R.layout.activity_select_or_search_ui);
     }
 }
