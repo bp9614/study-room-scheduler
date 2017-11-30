@@ -1,7 +1,10 @@
 package com.example.np.study_room_scheduler;
 
+import android.widget.EditText;
+
 import java.net.URI;
 import java.net.URL;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collection;
@@ -39,6 +42,8 @@ public class EWS {
     public static EWS getEWS() {
         return ews;
     }
+
+    public String getEmail() { return email; }
 
     public static EWS createEWS(String email, String password) throws Exception {
         ews = new EWS(email, password);
@@ -97,7 +102,11 @@ public class EWS {
             meeting.setStart(startDate);
             meeting.setEnd(endDate);
             meeting.setLocation("Library Group Study Room 01 (08-207)");
-            for(String s: recipients) {meeting.getRequiredAttendees().add(s);}
+            for(String s: recipients) {
+                if(!s.isEmpty()) {
+                    meeting.getRequiredAttendees().add(s);
+                }
+            }
             meeting.save(SendInvitationsMode.SendToAllAndSaveCopy);
             return true;
         } catch (Exception e) {
@@ -111,4 +120,5 @@ public class EWS {
             return redirectionUrl.toLowerCase().startsWith("https://");
         }
     }
+
 }

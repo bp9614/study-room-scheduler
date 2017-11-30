@@ -27,6 +27,7 @@
         android:layout_marginLeft="45dp"/>
 
     <EditText
+        android:id="@+id/organizer"
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
@@ -57,7 +58,7 @@
                 android:layout_gravity="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text=""
+                android:text="Dec"
                 android:textAllCaps="true"/>
 
             <TextView
@@ -67,7 +68,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
-                android:text=""/>
+                android:text="1, 2017"/>
 
         </LinearLayout>
 
@@ -88,7 +89,7 @@
                 android:id="@+id/room_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="Study Room #1"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -99,7 +100,7 @@
                 android:id="@+id/time_slot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="3:00 P.M. - 4:00 P.M."
                 android:layout_gravity="center"
                 android:textSize="18dp"
                 android:textStyle="bold"/>
@@ -117,34 +118,55 @@
         android:layout_marginLeft="45dp"/>
 
     <EditText
+        android:id="@+id/user_1"
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
+        android:maxLines="1"
         android:inputType="textEmailAddress"/>
 
     <EditText
+        android:id="@+id/user_2"
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
+        android:maxLines="1"
         android:inputType="textEmailAddress"/>
 
     <EditText
+        android:id="@+id/user_3"
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:text=""
         android:hint="USERNAME@EMAIL.COM"
         android:inputType="textEmailAddress"
+        android:maxLines="1"
         android:layout_marginBottom="30dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Schedule Room"
-        android:layout_gravity="center"/>
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule Room"
+            android:onClick="schedule"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Cancel"
+            android:onClick="cancel"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

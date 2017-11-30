@@ -19,8 +19,6 @@ public class LoginUI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_ui);
 
-        LazyCodedStaticValues.populateValues();
-
         ((EditText) findViewById(R.id.email)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {

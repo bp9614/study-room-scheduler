@@ -29,6 +29,7 @@
         <activity android:name=".RoomSchedulingUI" />
         <activity android:name=".SelectOrSearchUI" />
         <activity android:name=".RoomScheduleUI" />
+        <activity android:name=".ResultsUI"></activity>
     </application>
 
 </manifest>

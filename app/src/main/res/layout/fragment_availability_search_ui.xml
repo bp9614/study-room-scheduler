@@ -185,5 +185,6 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="Submit"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:onClick="searchDay"/>
 </LinearLayout>
