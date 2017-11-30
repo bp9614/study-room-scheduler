@@ -4,6 +4,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class SelectOrSearchUI extends AppCompatActivity {
 
@@ -19,5 +27,23 @@ public class SelectOrSearchUI extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    public void selectDay(View view) throws ParseException {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date selectedTime = dateFormat.parse(((Spinner) findViewById(R.id.select_year)).getSelectedItem().toString() + "/" +
+                LazyCodedStaticValues.monthToInt.get(((Spinner) findViewById(R.id.select_month)).getSelectedItem().toString()) + "/" +
+                ((Spinner) findViewById(R.id.select_day)).getSelectedItem().toString() +
+                " " + dateFormat.format(new Date()).split(" ")[1]);
+
+        long diff_in_days = (selectedTime.getTime() - new Date().getTime()) / (24 * 60 * 60 * 1000);
+
+        if(diff_in_days < 0) {
+            Toast.makeText(this, R.string.less_diff, Toast.LENGTH_SHORT).show();
+        } else if(diff_in_days >= 14){
+            Toast.makeText(this, R.string.in_advance, Toast.LENGTH_SHORT).show();
+        } else {
+
+        }
     }
 }

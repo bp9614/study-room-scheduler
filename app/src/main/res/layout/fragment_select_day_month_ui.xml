@@ -54,17 +54,20 @@
         android:layout_marginBottom="80dp">
 
         <Spinner
+            android:id="@+id/select_month"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:entries="@array/month_array" />
 
         <Spinner
+            android:id="@+id/select_day"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:entries="@array/day_array"/>
 
         <Spinner
+            android:id="@+id/select_year"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/year_array"/>
@@ -84,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="Submit"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:onClick="selectDay"/>
 
 </LinearLayout>

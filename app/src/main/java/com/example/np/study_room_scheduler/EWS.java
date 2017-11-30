@@ -1,26 +1,24 @@
 package com.example.np.study_room_scheduler;
 
-/**
- * Created by phamb1 on 11/30/2017.
- */
-
-import microsoft.exchange.webservices.data.autodiscover.IAutodiscoverRedirectionUrl;
-import microsoft.exchange.webservices.data.core.ExchangeService;
-import microsoft.exchange.webservices.data.core.PropertySet;
-import microsoft.exchange.webservices.data.core.enumeration.misc.ExchangeVersion;
-import microsoft.exchange.webservices.data.core.enumeration.service.SendInvitationsMode;
-import microsoft.exchange.webservices.data.core.service.item.Appointment;
-import microsoft.exchange.webservices.data.core.service.item.EmailMessage;
-import microsoft.exchange.webservices.data.core.service.item.Item;
-import microsoft.exchange.webservices.data.core.service.schema.ItemSchema;
-import microsoft.exchange.webservices.data.credential.ExchangeCredentials;
-import microsoft.exchange.webservices.data.credential.WebCredentials;
-import microsoft.exchange.webservices.data.property.complex.MessageBody;
-
+import java.net.URI;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+
+import microsoft.exchange.webservices.data.autodiscover.IAutodiscoverRedirectionUrl;
+import microsoft.exchange.webservices.data.core.ExchangeService;
+import microsoft.exchange.webservices.data.core.enumeration.misc.ExchangeVersion;
+import microsoft.exchange.webservices.data.core.enumeration.misc.IdFormat;
+import microsoft.exchange.webservices.data.core.enumeration.service.SendInvitationsMode;
+import microsoft.exchange.webservices.data.core.service.item.Appointment;
+import microsoft.exchange.webservices.data.core.service.item.EmailMessage;
+import microsoft.exchange.webservices.data.credential.ExchangeCredentials;
+import microsoft.exchange.webservices.data.credential.WebCredentials;
+import microsoft.exchange.webservices.data.misc.id.AlternateIdBase;
+import microsoft.exchange.webservices.data.misc.id.AlternatePublicFolderId;
+import microsoft.exchange.webservices.data.property.complex.MessageBody;
 
 public class EWS {
 
@@ -35,6 +33,7 @@ public class EWS {
         service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
         ExchangeCredentials credentials = new WebCredentials(email, password);
         service.setCredentials(credentials);
+        service.setUrl(new URI("https://outlook.office365.com/EWS/Exchange.asmx"));
     }
 
     public static EWS getEWS() {
@@ -52,12 +51,20 @@ public class EWS {
     }
 
     private boolean checkCredentials() {
+//        try {
+//            autodiscoverUrl();
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
         try {
-            autodiscoverUrl();
-            return true;
-        } catch (Exception e) {
-            return false;
+            AlternateIdBase x = service.convertId(new AlternatePublicFolderId(IdFormat.EwsId, "__dummyId__"), IdFormat.EwsId);
+        } catch ( Exception e ) {
+            if ( e.getMessage().contains("Unauthorized") ) {
+                return false;
+            }
         }
+        return true;
     }
 
     private void autodiscoverUrl() throws Exception {
@@ -104,5 +111,4 @@ public class EWS {
             return redirectionUrl.toLowerCase().startsWith("https://");
         }
     }
-
 }
